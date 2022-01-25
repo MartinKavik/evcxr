@@ -165,8 +165,8 @@ impl Module {
             .arg(&self.target)
             .arg("--message-format=json")
             .arg("--")
-            .arg("-C")
-            .arg("prefer-dynamic")
+            // .arg("-C")
+            // .arg("prefer-dynamic")
             .env("CARGO_TARGET_DIR", "target");
         if config.linker == "lld" {
             command
